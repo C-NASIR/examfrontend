@@ -1,21 +1,20 @@
-form {
+.form {
+  background-color: #263848;
   display: flex;
-  flex-direction: column;
-  width: 100%;
-}
-
-.input_field {
-  display: flex;
-  flex-direction: column;
-  width: 100%;
+  padding: 2em;
 }
 
 input {
-  padding: 0.2em 2em;
+  border: none;
+  margin: 0px 0.5em;
+  width: 20em;
+  padding-left: 0.5em;
 }
 
 button {
-  width: 100%;
-  padding: 0.5em;
-  margin: 0.5em 0em;
+  background-color: #2381c2;
+  border: none;
+  height: 3em;
+  padding: 0em 2em;
+  color: white;
 }
