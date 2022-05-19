@@ -15,21 +15,32 @@ const graphqlQuery = {
   `,
 };
 
-const DUMMY_DATA = [
-  {
-    link: "google.com",
-    slug: "http://localhost:3001/testsl",
-    id: 1,
-  },
-  {
-    link: "google.com",
-    slug: "http://localhost:3001/testsl",
-    id: 2,
-  },
-];
-
 function App() {
   const [links, setLinks] = useState([]);
+
+  const createLink = (data) => {
+    console.log("This is what data looks like ", data);
+    const graphqlQuery = {
+      query: `
+        mutation {
+          createLink(userInput : { link : "${data.link}", customSlug : "${data.slug}"}) {
+            link
+            slug
+            id
+          }
+        }
+      `,
+    };
+
+    fetch("http://localhost:4000/graphql", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(graphqlQuery),
+    })
+      .then((response) => response.json())
+      .then((result) => setLinks((state) => [...state, result.data.createLink]))
+      .catch((err) => console.log("There was an error ", err));
+  };
 
   useEffect(() => {
     fetch("http://localhost:4000/graphql", {
@@ -46,7 +57,7 @@ function App() {
     <div className={styles.app}>
       <Header />
       <Banner />
-      <Form />
+      <Form createLink={createLink} />
       {links.map((link) => (
         <Displaylink key={link.id} link={link.link} slug={link.slug} />
       ))}
