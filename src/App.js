@@ -29,7 +29,18 @@ const DUMMY_DATA = [
 ];
 
 function App() {
-  const [links, setLinks] = useState(DUMMY_DATA);
+  const [links, setLinks] = useState([]);
+
+  useEffect(() => {
+    fetch("http://localhost:4000/graphql", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(graphqlQuery),
+    })
+      .then((response) => response.json())
+      .then((result) => setLinks(result.data.getAllLinks))
+      .catch((err) => console.log("There was an error ", err));
+  }, []);
 
   return (
     <div className={styles.app}>
