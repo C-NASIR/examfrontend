@@ -1,0 +1,15 @@
+.footer {
+  background-color: #595d66;
+  display: flex;
+  justify-content: space-around;
+  color: white;
+  font-size: 15px;
+}
+
+.logo {
+  display: flex;
+}
+
+.logo > p {
+  margin-left: 0.5em;
+}
