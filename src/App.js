@@ -23,7 +23,7 @@ function App() {
     const graphqlQuery = {
       query: `
         mutation {
-          createLink(userInput : { link : "${data.link}", customSlug : "${data.slug}"}) {
+          createLink(userInput : { link : "${data.link}", slug: "${data.slug}"}) {
             link
             slug
             id
