@@ -10,6 +10,8 @@ function Form({ createLink }) {
       link: linkInput,
       slug: slugInput,
     });
+    setLinkInput("");
+    setSlugInput("");
   };
 
   return (
