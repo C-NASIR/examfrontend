@@ -16,18 +16,20 @@ function Form({ createLink }) {
 
   return (
     <div className={styles.form}>
-      <input
-        value={linkInput}
-        type="text"
-        placeholder="Make your links shorter"
-        onChange={(e) => setLinkInput(e.target.value)}
-      />
-      <input
-        value={slugInput}
-        type="text"
-        placeholder="Custom slug"
-        onChange={(e) => setSlugInput(e.target.value)}
-      />
+      <div className={styles.input_fields}>
+        <input
+          value={linkInput}
+          type="text"
+          placeholder="Make your links shorter"
+          onChange={(e) => setLinkInput(e.target.value)}
+        />
+        <input
+          value={slugInput}
+          type="text"
+          placeholder="Custom slug"
+          onChange={(e) => setSlugInput(e.target.value)}
+        />
+      </div>
       <button className={styles.shorten_button} onClick={shortenHandler}>
         Shorten URL
       </button>

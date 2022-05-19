@@ -18,6 +18,7 @@
   font-size: 20px;
   border: none;
   color: white;
+  padding: 0.5em;
 }
 
 .content_demo_button {
@@ -28,9 +29,27 @@
   font-size: 20px;
   border: 2px solid #2381c2;
   color: #2381c2;
+  padding: 0.5em;
 }
 
 img {
   width: 20em;
   border-radius: 20%;
+}
+
+/* For small screen  */
+@media screen and (max-width: 670px) {
+  .banner {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .content {
+    width: 80%;
+  }
+
+  .profile {
+    margin: 1em 0em;
+  }
 }

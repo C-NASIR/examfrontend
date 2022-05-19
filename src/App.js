@@ -19,7 +19,6 @@ function App() {
   const [links, setLinks] = useState([]);
 
   const createLink = (data) => {
-    console.log("This is what data looks like ", data);
     const graphqlQuery = {
       query: `
         mutation {

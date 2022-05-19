@@ -2,13 +2,19 @@
   background-color: #263848;
   display: flex;
   padding: 2em;
+  gap: 1em;
 }
 
-input {
+.input_fields {
+  display: flex;
+  gap: 1em;
+}
+
+.input_fields input {
   border: none;
-  margin: 0px 0.5em;
   width: 20em;
   padding-left: 0.5em;
+  height: 2.8em;
 }
 
 .shorten_button {
@@ -21,4 +27,14 @@ input {
 
 .shorten_button:hover {
   cursor: pointer;
+}
+
+/* For small screen  */
+@media screen and (max-width: 670px) {
+  .form {
+    flex-direction: column;
+  }
+  .input_fields {
+    width: 100%;
+  }
 }
