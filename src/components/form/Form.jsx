@@ -5,7 +5,7 @@ function Form() {
     <div className={styles.form}>
       <input type="text" placeholder="Make your links shorter" />
       <input type="text" placeholder="Custom slug" />
-      <button> Shorten URL </button>
+      <button className={styles.shorten_button}> Shorten URL </button>
     </div>
   );
 }

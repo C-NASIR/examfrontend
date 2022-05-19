@@ -11,10 +11,14 @@ input {
   padding-left: 0.5em;
 }
 
-button {
+.shorten_button {
   background-color: #2381c2;
   border: none;
   height: 3em;
   padding: 0em 2em;
   color: white;
+}
+
+.shorten_button:hover {
+  cursor: pointer;
 }

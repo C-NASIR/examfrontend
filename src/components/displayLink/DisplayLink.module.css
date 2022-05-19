@@ -1,3 +1,21 @@
 .Displaylink {
+  border: 2px solid #263848;
+  margin: 0em 2em;
   display: flex;
+  justify-content: space-evenly;
+  border-radius: 0.8em;
+  padding: 0.3em 1em;
+  align-items: center;
+}
+
+.copy_button {
+  background-color: #2381c2;
+  color: white;
+  border: none;
+  height: 3em;
+  padding: 0em 2em;
+}
+
+.copy_button:hover {
+  cursor: pointer;
 }
