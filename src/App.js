@@ -1,6 +1,9 @@
-import Form from "./components/form/Form";
+import Header from "./components/header/Header";
 import Banner from "./components/Banner/Banner";
+import Form from "./components/form/Form";
 import Displaylink from "./components/displayLink/DisplayLink";
+import Footer from "./components/footer/Footer";
+
 import styles from "./App.module.css";
 import { useEffect, useState } from "react";
 
@@ -30,11 +33,13 @@ function App() {
 
   return (
     <div className={styles.app}>
+      <Header />
       <Banner />
       <Form />
       {links.map((link) => (
         <Displaylink key={link.id} link={link.link} slug={link.slug} />
       ))}
+      <Footer />
     </div>
   );
 }

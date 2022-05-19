@@ -1,8 +1,10 @@
+import styles from "./DisplayLink.module.css";
+
 function Displaylink({ link, slug }) {
   return (
-    <div>
-      <h3> {link}</h3>
-      <h3> {slug}</h3>
+    <div className={styles.Displaylink}>
+      <p> {link} ======= </p>
+      <p> {slug}</p>
     </div>
   );
 }

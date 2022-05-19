@@ -1,5 +1,15 @@
+import styles from "./Form.module.css";
+
 function Form() {
-  return <h1> Hello From Form</h1>;
+  return (
+    <div className={styles.form}>
+      <div className={styles.input_field}>
+        <label for="link"> Link </label>
+        <input type="text" />
+      </div>
+      <button> Shorten </button>
+    </div>
+  );
 }
 
 export default Form;
