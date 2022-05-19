@@ -4,7 +4,7 @@ function Form() {
   return (
     <div className={styles.form}>
       <div className={styles.input_field}>
-        <label for="link"> Link </label>
+        <label htmlFor="link"> Link </label>
         <input type="text" />
       </div>
       <button> Shorten </button>
